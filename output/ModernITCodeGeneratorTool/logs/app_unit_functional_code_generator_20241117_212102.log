@@ -1,0 +1,210 @@
+2024-11-17 21:21:03,000 - INFO - Starting batch test generation process for target/src
+2024-11-17 21:21:03,297 - INFO - Found 3 Python files to process
+2024-11-17 21:21:03,299 - INFO - Processing file 1/3: target/src/pl_pig_chess_engine.py
+2024-11-17 21:21:03,299 - INFO - Processing file: target/src/pl_pig_chess_engine.py
+2024-11-17 21:21:03,431 - INFO - Successfully read file from S3. Status: 200
+2024-11-17 21:21:03,433 - INFO - Generating unit tests...
+2024-11-17 21:21:45,552 - INFO - Bedrock API call successful on attempt 1. Status Code: 200
+2024-11-17 21:21:45,553 - INFO - Response Headers: {
+  "RequestId": "9bf4f9ea-5c21-4f7a-a85b-66126f06c2be",
+  "HTTPStatusCode": 200,
+  "HTTPHeaders": {
+    "date": "Sun, 17 Nov 2024 21:21:45 GMT",
+    "content-type": "application/json",
+    "content-length": "8817",
+    "connection": "keep-alive",
+    "x-amzn-requestid": "9bf4f9ea-5c21-4f7a-a85b-66126f06c2be",
+    "x-amzn-bedrock-invocation-latency": "42092",
+    "x-amzn-bedrock-output-token-count": "2558",
+    "x-amzn-bedrock-input-token-count": "1659"
+  },
+  "RetryAttempts": 0
+}
+2024-11-17 21:21:45,774 - INFO - Successfully wrote to S3. Status: 200
+2024-11-17 21:21:45,777 - INFO - Generating functional tests...
+2024-11-17 21:21:58,516 - WARNING - 
+                Bedrock API Error (Attempt 1/10):
+                Status Code: 429
+                Error Code: ThrottlingException
+                Error Message: Too many requests, please wait before trying again.
+            
+2024-11-17 21:21:58,517 - INFO - Retrying in 1.05 seconds...
+2024-11-17 21:22:31,977 - INFO - Bedrock API call successful on attempt 2. Status Code: 200
+2024-11-17 21:22:31,977 - INFO - Response Headers: {
+  "RequestId": "f82e747f-0a2a-4807-b8b3-809c25f1efc9",
+  "HTTPStatusCode": 200,
+  "HTTPHeaders": {
+    "date": "Sun, 17 Nov 2024 21:22:31 GMT",
+    "content-type": "application/json",
+    "content-length": "5540",
+    "connection": "keep-alive",
+    "x-amzn-requestid": "f82e747f-0a2a-4807-b8b3-809c25f1efc9",
+    "x-amzn-bedrock-invocation-latency": "27284",
+    "x-amzn-bedrock-output-token-count": "1662",
+    "x-amzn-bedrock-input-token-count": "1644"
+  },
+  "RetryAttempts": 3
+}
+2024-11-17 21:22:32,145 - INFO - Successfully wrote to S3. Status: 200
+2024-11-17 21:22:32,147 - INFO - Tests generated successfully for target/src/pl_pig_chess_engine.py
+2024-11-17 21:22:32,148 - INFO - Completed processing file 1/3
+2024-11-17 21:22:32,148 - INFO - Processing file 2/3: target/src/pl_pig_chess_engine_eval.py
+2024-11-17 21:22:32,149 - INFO - Processing file: target/src/pl_pig_chess_engine_eval.py
+2024-11-17 21:22:32,265 - INFO - Successfully read file from S3. Status: 200
+2024-11-17 21:22:32,267 - INFO - Generating unit tests...
+2024-11-17 21:22:40,092 - WARNING - 
+                Bedrock API Error (Attempt 1/10):
+                Status Code: 429
+                Error Code: ThrottlingException
+                Error Message: Too many requests, please wait before trying again.
+            
+2024-11-17 21:22:40,092 - INFO - Retrying in 1.03 seconds...
+2024-11-17 21:22:49,331 - WARNING - 
+                Bedrock API Error (Attempt 2/10):
+                Status Code: 429
+                Error Code: ThrottlingException
+                Error Message: Too many requests, please wait before trying again.
+            
+2024-11-17 21:22:49,333 - INFO - Retrying in 2.04 seconds...
+2024-11-17 21:23:02,448 - WARNING - 
+                Bedrock API Error (Attempt 3/10):
+                Status Code: 429
+                Error Code: ThrottlingException
+                Error Message: Too many requests, please wait before trying again.
+            
+2024-11-17 21:23:02,448 - INFO - Retrying in 4.01 seconds...
+2024-11-17 21:23:40,059 - INFO - Bedrock API call successful on attempt 4. Status Code: 200
+2024-11-17 21:23:40,059 - INFO - Response Headers: {
+  "RequestId": "0bdf34f1-565b-4273-9ae9-080e34321772",
+  "HTTPStatusCode": 200,
+  "HTTPHeaders": {
+    "date": "Sun, 17 Nov 2024 21:23:40 GMT",
+    "content-type": "application/json",
+    "content-length": "7005",
+    "connection": "keep-alive",
+    "x-amzn-requestid": "0bdf34f1-565b-4273-9ae9-080e34321772",
+    "x-amzn-bedrock-invocation-latency": "33599",
+    "x-amzn-bedrock-output-token-count": "1897",
+    "x-amzn-bedrock-input-token-count": "1228"
+  },
+  "RetryAttempts": 0
+}
+2024-11-17 21:23:40,181 - INFO - Successfully wrote to S3. Status: 200
+2024-11-17 21:23:40,183 - INFO - Generating functional tests...
+2024-11-17 21:23:49,698 - WARNING - 
+                Bedrock API Error (Attempt 1/10):
+                Status Code: 429
+                Error Code: ThrottlingException
+                Error Message: Too many requests, please wait before trying again.
+            
+2024-11-17 21:23:49,699 - INFO - Retrying in 1.02 seconds...
+2024-11-17 21:24:01,462 - WARNING - 
+                Bedrock API Error (Attempt 2/10):
+                Status Code: 429
+                Error Code: ThrottlingException
+                Error Message: Too many requests, please wait before trying again.
+            
+2024-11-17 21:24:01,463 - INFO - Retrying in 2.06 seconds...
+2024-11-17 21:24:33,555 - INFO - Bedrock API call successful on attempt 3. Status Code: 200
+2024-11-17 21:24:33,555 - INFO - Response Headers: {
+  "RequestId": "5e0937f7-3fcb-4bce-bbd1-cfbd3bca0fa3",
+  "HTTPStatusCode": 200,
+  "HTTPHeaders": {
+    "date": "Sun, 17 Nov 2024 21:24:33 GMT",
+    "content-type": "application/json",
+    "content-length": "5240",
+    "connection": "keep-alive",
+    "x-amzn-requestid": "5e0937f7-3fcb-4bce-bbd1-cfbd3bca0fa3",
+    "x-amzn-bedrock-invocation-latency": "26086",
+    "x-amzn-bedrock-output-token-count": "1410",
+    "x-amzn-bedrock-input-token-count": "1213"
+  },
+  "RetryAttempts": 3
+}
+2024-11-17 21:24:33,675 - INFO - Successfully wrote to S3. Status: 200
+2024-11-17 21:24:33,677 - INFO - Tests generated successfully for target/src/pl_pig_chess_engine_eval.py
+2024-11-17 21:24:33,678 - INFO - Completed processing file 2/3
+2024-11-17 21:24:33,679 - INFO - Processing file 3/3: target/src/pl_pig_chess_interface.py
+2024-11-17 21:24:33,679 - INFO - Processing file: target/src/pl_pig_chess_interface.py
+2024-11-17 21:24:33,809 - INFO - Successfully read file from S3. Status: 200
+2024-11-17 21:24:33,811 - INFO - Generating unit tests...
+2024-11-17 21:24:41,099 - WARNING - 
+                Bedrock API Error (Attempt 1/10):
+                Status Code: 429
+                Error Code: ThrottlingException
+                Error Message: Too many requests, please wait before trying again.
+            
+2024-11-17 21:24:41,100 - INFO - Retrying in 1.07 seconds...
+2024-11-17 21:24:49,018 - WARNING - 
+                Bedrock API Error (Attempt 2/10):
+                Status Code: 429
+                Error Code: ThrottlingException
+                Error Message: Too many requests, please wait before trying again.
+            
+2024-11-17 21:24:49,018 - INFO - Retrying in 2.01 seconds...
+2024-11-17 21:24:58,023 - WARNING - 
+                Bedrock API Error (Attempt 3/10):
+                Status Code: 429
+                Error Code: ThrottlingException
+                Error Message: Too many requests, please wait before trying again.
+            
+2024-11-17 21:24:58,023 - INFO - Retrying in 4.08 seconds...
+2024-11-17 21:25:05,082 - WARNING - 
+                Bedrock API Error (Attempt 4/10):
+                Status Code: 429
+                Error Code: ThrottlingException
+                Error Message: Too many requests, please wait before trying again.
+            
+2024-11-17 21:25:05,083 - INFO - Retrying in 8.05 seconds...
+2024-11-17 21:25:57,464 - INFO - Bedrock API call successful on attempt 5. Status Code: 200
+2024-11-17 21:25:57,465 - INFO - Response Headers: {
+  "RequestId": "87e9f0a7-4f5c-4a8c-bf49-b732d246fa38",
+  "HTTPStatusCode": 200,
+  "HTTPHeaders": {
+    "date": "Sun, 17 Nov 2024 21:25:57 GMT",
+    "content-type": "application/json",
+    "content-length": "7516",
+    "connection": "keep-alive",
+    "x-amzn-requestid": "87e9f0a7-4f5c-4a8c-bf49-b732d246fa38",
+    "x-amzn-bedrock-invocation-latency": "44324",
+    "x-amzn-bedrock-output-token-count": "2503",
+    "x-amzn-bedrock-input-token-count": "3028"
+  },
+  "RetryAttempts": 0
+}
+2024-11-17 21:25:57,625 - INFO - Successfully wrote to S3. Status: 200
+2024-11-17 21:25:57,627 - INFO - Generating functional tests...
+2024-11-17 21:26:03,434 - WARNING - 
+                Bedrock API Error (Attempt 1/10):
+                Status Code: 429
+                Error Code: ThrottlingException
+                Error Message: Too many tokens, please wait before trying again.
+            
+2024-11-17 21:26:03,435 - INFO - Retrying in 1.06 seconds...
+2024-11-17 21:26:10,482 - WARNING - 
+                Bedrock API Error (Attempt 2/10):
+                Status Code: 429
+                Error Code: ThrottlingException
+                Error Message: Too many requests, please wait before trying again.
+            
+2024-11-17 21:26:10,482 - INFO - Retrying in 2.00 seconds...
+2024-11-17 21:26:40,734 - INFO - Bedrock API call successful on attempt 3. Status Code: 200
+2024-11-17 21:26:40,735 - INFO - Response Headers: {
+  "RequestId": "c4967eee-8c65-4477-b304-f8703bfb5e7a",
+  "HTTPStatusCode": 200,
+  "HTTPHeaders": {
+    "date": "Sun, 17 Nov 2024 21:26:40 GMT",
+    "content-type": "application/json",
+    "content-length": "5356",
+    "connection": "keep-alive",
+    "x-amzn-requestid": "c4967eee-8c65-4477-b304-f8703bfb5e7a",
+    "x-amzn-bedrock-invocation-latency": "26075",
+    "x-amzn-bedrock-output-token-count": "1555",
+    "x-amzn-bedrock-input-token-count": "3013"
+  },
+  "RetryAttempts": 2
+}
+2024-11-17 21:26:40,829 - INFO - Successfully wrote to S3. Status: 200
+2024-11-17 21:26:40,831 - INFO - Tests generated successfully for target/src/pl_pig_chess_interface.py
+2024-11-17 21:26:40,832 - INFO - Completed processing file 3/3
+2024-11-17 21:26:40,832 - INFO - Batch test generation process completed

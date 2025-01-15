@@ -1,0 +1,50 @@
+title Chess Game Micro Service Flow
+direction down
+// Nodes and groups
+  StartChess [shape: oval, icon: gear, color: green]
+
+ChessGame [color: green] {
+  White?? [shape: diamond, icon: decision]
+  IamWhite  [icon: gear, color: blue]
+  IamBlack  [icon: gear, color: blue]
+  ReadTheBoard [icon: gear, color: blue]
+  ReadTheBoard2  [icon: gear, color: blue]
+  ExpandAllLegalMoves  [icon: gear, color: blue]
+  ApplyMinMaxAlgorithmAndAlphaBetaPruning [icon: gear, color: blue, label: "Apply MinMax Algorithm and alpha-beta Pruning"]
+  CalculateEvaluationFunction [icon: gear, color: blue, label: "Calculate Evaluation Function"]
+  ReturnBestMove [icon: gear, color: blue, label: "Return Best Move"]
+  Win?? [shape: diamond, color: green, icon: decision]
+  End [color: red]
+
+  Loose [shape: diamond, color: green, icon: decision]
+  End2 [color: red]
+  Draw [shape: diamond, color: green, icon: decision]
+  End3 [color: red]
+
+
+}
+
+
+
+// Relationships
+StartChess > ReadTheBoard
+ReadTheBoard > White??
+White?? > IamWhite: Yes
+White?? > IamBlack: No
+IamWhite > ReadTheBoard2
+IamBlack > ReadTheBoard2
+ReadTheBoard2 > ExpandAllLegalMoves
+ExpandAllLegalMoves > ApplyMinMaxAlgorithmAndAlphaBetaPruning
+ApplyMinMaxAlgorithmAndAlphaBetaPruning > CalculateEvaluationFunction
+CalculateEvaluationFunction > ReturnBestMove
+ReturnBestMove > Win??
+Win?? > End : Yes
+Win?? > Loose: No
+Loose > End2 : Yes
+Loose > Draw : No
+Draw > End3 : Yes
+Draw > StartChess : No
+
+
+
+

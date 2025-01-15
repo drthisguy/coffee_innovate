@@ -1,0 +1,17 @@
+title Epic, Features, User Stories and Acceptance Criteria Generation
+Generate User Stories [icon: aws]{
+	// Nodes and groups
+	GUS Input S3 [icon: aws-s3, label: "Input: Friendly Documentation"]
+
+	User_Stories_Processing [icon: aws-lambda] {
+	  GUS AWS Bedrock [icon: aws-bedrock, label: "LLM for converting code to Epics, features and user stories"]
+	  GUS Approval Pipeline [icon: aws-codepipeline, label: "Iterative: Approval & Editing"]
+	}
+
+	GUS Output S3 [icon: aws-s3, label: "Epics, Features, User Stories and Acceptance Criteria"]
+
+}
+	GUS Input S3 > GUS AWS Bedrock: Read PL/SQL Code
+	GUS AWS Bedrock > GUS Approval Pipeline: Convert code to Epics, Features, User Stories and Acceptance Criteria
+	GUS Approval Pipeline > GUS Output S3: Store the Epics, Features, User Stories and Acceptance Criteria
+ User_Stories_Processing > User_Stories_Processing: Iterative Process

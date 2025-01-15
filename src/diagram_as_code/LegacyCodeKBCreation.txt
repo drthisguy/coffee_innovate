@@ -1,0 +1,24 @@
+title Legacy Code Knowledge Base Creation
+
+
+
+Knowledge Base Discovery [icon: aws]{
+	// Nodes and groups
+	
+	KBD Input S3 [icon: aws-s3, label: "s3: Raw Documentation, Meetings, Emails, Conversations, etc., "]
+
+	Knowledge Base Discovery Processing [icon: aws-lambda] {
+	  KBD Approval Pipeline [icon: aws-codepipeline, label: "Iteration: Approval and Editing"]
+    
+	}
+
+	KBD Output S3 [icon: aws-s3, label: "Result Knowledge Base Documentation"]
+}
+
+// Connections
+	KBD Input S3 > Knowledge Base Discovery Processing
+	Knowledge Base Discovery Processing >  KBD Output S3
+
+
+
+  Knowledge Base Discovery Processing  > Knowledge Base Discovery Processing 

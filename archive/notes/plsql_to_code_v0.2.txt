@@ -1,0 +1,103 @@
+title GenAI based PL/SQL modernization
+
+
+
+Knowledge Base Discovery [icon: aws]{
+	// Nodes and groups
+	
+	KBD Input S3 [icon: aws-s3, label: "s3: Raw Documentation "]
+
+	Knowledge Base Discovery Processing [icon: aws-lambda] {
+	  KBD Approval Pipeline [icon: aws-codepipeline, label: "Iterative: Approval & Editing"]
+	}
+
+	KBD Output S3 [icon: aws-s3, label: "s3: Result Knowledge Base Discovery Documentation"]
+}
+
+Generate User Friendly Documentation[icon: aws]{
+	// Nodes and groups
+	UFD Input S3 [icon: aws-s3, label: "s3: Knowledge Base Discovery Documentation "]
+
+	User Friendly Documentation Processing [icon: aws-lambda] {
+	  UFD AWS Bedrock [icon: aws-bedrock, label: "LLM for user friendly documentation from existing raw documentation"]
+	  UFD Approval Pipeline [icon: aws-codepipeline, label: "Iterative: Approval & Editing"]
+	}
+
+	UFD Output S3 [icon: aws-s3, label: "s3: Result User Friendly Documentation"]
+
+	
+}
+
+Generate User Stories [icon: aws]{
+	// Nodes and groups
+	GUS Input S3 [icon: aws-s3, label: "s3:Input S3 Bucket for code"]
+
+	User_Stories_Processing [icon: aws-lambda] {
+	  GUS AWS Bedrock [icon: aws-bedrock, label: "LLM for converting code to Epics, features and user stories"]
+	  GUS Approval Pipeline [icon: aws-codepipeline, label: "Iterative: Approval & Editing"]
+	}
+
+	GUS Output S3 [icon: aws-s3, label: "s3: Epics, Features, User Stories and Acceptance Criteria"]
+
+}
+
+Generate Test Cases [icon: aws]{
+	// Nodes and groups
+	GTC_Input_S3 [icon: aws-s3, label: "s3:User Stories"]
+
+	Test_Casses_Processing [icon: aws-lambda] {
+	  GTC_AWS_Bedrock [icon: aws-bedrock, label: "LLM for converting user stories to Test cases"]
+	  GTC_Approval_Pipeline [icon: aws-codepipeline, label: "Iterative: Approval & Editing"]
+	}
+
+	GTC_Output_S3 [icon: aws-s3, label: "s3: Test Cases, Templates, Configurations"]
+
+}
+	
+Code Conversion[icon: aws]{
+	// Nodes and groups
+	CCN Input S3 [icon: aws-s3, label: "Input S3 Bucket for code"]
+
+	Code Conversion Processing [icon: aws-lambda] {
+	  CCN AWS Bedrock [icon: aws-bedrock, label: "LLM Conversion"]
+	  CCN Approval Pipeline [icon: aws-codepipeline, label: "Iterative: Approval & Editing"]
+	}
+
+	CCN Output S3 [icon: aws-s3, label: "Results: Converted Code from PL/SQL to Python"]
+}
+
+Generate_Unit_Functional_TCs[icon: aws]{
+	// Nodes and groups
+	GUFT_Input_S3 [icon: aws-s3, label: "Input S3 Bucket for newly generated code"]
+
+	GUFT_Unit_Function_TCS_Processing [icon: aws-lambda] {
+	  GUFT_AWS_Bedrock [icon: aws-bedrock, label: "LLM for Unit/Functional Test Cases`"]
+	  GUFT_Approval_Pipeline [icon: aws-codepipeline, label: "Iterative: Approval & Editing"]
+	}
+
+	GUFT_Output_S3 [icon: aws-s3, label: "Results: Generated Unit/Functional Test Cases"]
+}
+
+// Connections
+	KBD Input S3 > Knowledge Base Discovery Processing
+	Knowledge Base Discovery Processing >  KBD Output S3
+	
+	UFD Input S3 > UFD AWS Bedrock: Read the raw documentation
+	UFD AWS Bedrock > UFD Approval Pipeline: Convert raw documentation to User friendly documentation
+	UFD Approval Pipeline > UFD Output S3: Store final user friendly documentation
+ 
+	GUS Input S3 > GUS AWS Bedrock: Read PL/SQL Code
+	GUS AWS Bedrock > GUS Approval Pipeline: Convert code to Epics, Features, User Stories and Acceptance Criteria
+	GUS Approval Pipeline > GUS Output S3: Store the Epics, Features, User Stories and Acceptance Criteria
+	
+	GTC_Input_S3 > GTC_AWS_Bedrock: Read User Stories
+	GTC_AWS_Bedrock > GTC_Approval_Pipeline: Convert User Stories to test cases, template and configurations
+	GTC_Approval_Pipeline > GTC_Output_S3: Store test cases, template and configurations
+
+	CCN Input S3 > CCN AWS Bedrock: Read PL/SQL code
+	CCN AWS Bedrock > CCN Approval Pipeline: Convert to Python
+	CCN Approval Pipeline > CCN Output S3: Store final Python code
+	
+	GUFT_Input_S3 > GUFT_AWS_Bedrock: Read Generated Python Code
+	GUFT_AWS_Bedrock > GUFT_Approval_Pipeline: Generate Unit/Functional Test Cases
+	GUFT_Approval_Pipeline > GUFT_Output_S3: Store generated Unit/Functional Test Cases

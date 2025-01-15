@@ -1,0 +1,20 @@
+title Generate Unit/Functional Test Cases for Modern Code 
+
+Generate_Unit_Functional_TCs[icon: aws, label: "Generate Unit/Functional Test Cases"]{
+	// Nodes and groups
+	GUFT_Input_S3 [icon: aws-s3, label: "Input: Newly Generated Modern Code"]
+
+	GUFT_Unit_Function_TCS_Processing [icon: aws-lambda, label:"Unit/Functional Test Cases Processing"] {
+	  GUFT_AWS_Bedrock [icon: aws-bedrock, label: "LLM for Unit/Functional Test Cases`"]
+	  GUFT_Approval_Pipeline [icon: aws-codepipeline, label: "Iterative: Approval & Editing"]
+	}
+
+	GUFT_Output_S3 [icon: aws-s3, label: "Results: Generated Unit/Functional Test Cases"]
+}
+
+//Connections
+	GUFT_Input_S3 > GUFT_AWS_Bedrock: Read Generated Python Code
+	GUFT_AWS_Bedrock > GUFT_Approval_Pipeline: Generate Unit/Functional Test Cases
+	GUFT_Approval_Pipeline > GUFT_Output_S3: Store generated Unit/Functional Test Cases
+	
+ GUFT_Unit_Function_TCS_Processing > GUFT_Unit_Function_TCS_Processing : Iterative Process

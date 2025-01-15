@@ -1,0 +1,23 @@
+title Legacy Code Conversion To Modern Code
+
+Code Conversion[icon: aws]{
+	// Nodes and groups
+	CCN Input S3 [icon: aws-s3, label: "Input S3 Bucket For Legacy Source Code"]
+
+	Code Conversion Processing [icon: aws-lambda] {
+	  CCN AWS Bedrock [icon: aws-bedrock, label: "LLM Conversion"]
+	  CCN Approval Pipeline [icon: aws-codepipeline, label: "Iterative: Approval & Editing"]
+	}
+
+	CCN Output S3 [icon: aws-s3, label: "Python code converted from PL/SQL"]
+}
+
+// Connections
+
+	CCN Input S3 > CCN AWS Bedrock: Read PL/SQL code
+	CCN AWS Bedrock > CCN Approval Pipeline: Convert to Python
+	CCN Approval Pipeline > CCN Output S3: Store final Python code
+
+  Code Conversion Processing > Code Conversion Processing : Iterative Process
+
+	

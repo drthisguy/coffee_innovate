@@ -1,0 +1,20 @@
+title Application Test Cases Generation
+
+Generate Test Cases [icon: aws]{
+	// Nodes and groups
+	GTC_Input_S3 [icon: aws-s3, label: "User Stories"]
+
+	Test_Casses_Processing [icon: aws-lambda, label: "Test Cases Processing"] {
+	  GTC_AWS_Bedrock [icon: aws-bedrock, label: "LLM for converting user stories to Test cases"]
+	  GTC_Approval_Pipeline [icon: aws-codepipeline, label: "Iterative: Approval & Editing"]
+	}
+
+	GTC_Output_S3 [icon: aws-s3, label: "Test Cases, Templates, Configurations"]
+
+}
+
+	GTC_Input_S3 > GTC_AWS_Bedrock: Read User Stories
+	GTC_AWS_Bedrock > GTC_Approval_Pipeline: Convert User Stories to test cases, template and configurations
+	GTC_Approval_Pipeline > GTC_Output_S3: Store test cases, template and configurations
+
+  Test_Casses_Processing > Test_Casses_Processing : Iterative Process
