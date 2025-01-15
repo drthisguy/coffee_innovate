@@ -1,0 +1,22 @@
+title User Friendly Documents Generation
+
+Generate User Friendly Documentation[icon: aws]{
+	// Nodes and groups
+	UFD Input S3 [icon: aws-s3, label: "Knowledge Base Discovery Documentation "]
+
+	User Friendly Documentation Processing [icon: aws-lambda] {
+	  UFD AWS Bedrock [icon: aws-bedrock, label: "LLM for user friendly documentation from existing raw documentation"]
+	  UFD Approval Pipeline [icon: aws-codepipeline, label: "Iterative: Approval & Editing"]
+	}
+
+	UFD Output S3 [icon: aws-s3, label: "User Friendly Documentation"]
+
+	
+}
+
+//Connections
+
+	UFD Input S3 > UFD AWS Bedrock: Read the raw documentation
+	UFD AWS Bedrock > UFD Approval Pipeline: Convert raw documentation to User friendly documentation
+	UFD Approval Pipeline > UFD Output S3: Store final user friendly documentation
+  User Friendly Documentation Processing  > User Friendly Documentation Processing

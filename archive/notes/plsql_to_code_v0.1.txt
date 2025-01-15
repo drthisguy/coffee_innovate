@@ -1,0 +1,16 @@
+title GenAI based PL/SQL modernization
+
+// Nodes and groups
+Input S3 [icon: aws-s3, label: "Input S3 Bucket for code"]
+
+Processing [icon: aws-lambda] {
+  AWS Bedrock [icon: aws-bedrock, label: "LLM Conversion"]
+  Approval Pipeline [icon: aws-codepipeline, label: "Approval & Editing"]
+}
+
+Output S3 [icon: aws-s3, label: "Results S3 Bucket"]
+
+// Connections
+Input S3 > AWS Bedrock: Read PL/SQL code
+AWS Bedrock > Approval Pipeline: Convert to Python
+Approval Pipeline > Output S3: Store final Python code

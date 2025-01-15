@@ -1,0 +1,23 @@
+title Modernization Effort Using GenAI
+// Define groups and nodes
+
+Knowledge Base Discovery [icon: aws-compute]
+
+Legacy Source Code [icon: aws-compute]
+
+User Friendly Documentation[icon: aws-compute]
+
+User Stories [icon: aws-compute]
+
+Application Test Cases [icon: aws-compute]
+	
+Converted Code[icon: aws-compute]
+
+Unit And Functional TestCases[icon: aws-compute]
+
+
+Knowledge Base Discovery >  User Friendly Documentation: Generate Documentation from Knowledge Base, Meetings, Emails and Conversations
+User Friendly Documentation > User Stories: Generate User Stories from Documentation 
+User Friendly Documentation > Application Test Cases: Generate Application Test Cases from Documentation
+Legacy Source Code  > Converted Code: Generate modern code from  legacy source code
+Converted Code > Unit And Functional TestCases: Generate Unit Test Cases from converted code

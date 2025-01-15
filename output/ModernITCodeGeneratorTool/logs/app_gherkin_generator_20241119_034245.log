@@ -1,0 +1,112 @@
+2024-11-19 03:42:45,280 - INFO - Starting test to Gherkin conversion process
+2024-11-19 03:42:45,478 - INFO - Found 6 Python files
+2024-11-19 03:42:45,479 - INFO - Found file: target/test/test_pl_pig_chess_engine.py
+2024-11-19 03:42:45,480 - INFO - Found file: target/test/test_pl_pig_chess_engine_eval.py
+2024-11-19 03:42:45,480 - INFO - Found file: target/test/test_pl_pig_chess_engine_eval_functional.py
+2024-11-19 03:42:45,481 - INFO - Found file: target/test/test_pl_pig_chess_engine_functional.py
+2024-11-19 03:42:45,481 - INFO - Found file: target/test/test_pl_pig_chess_interface.py
+2024-11-19 03:42:45,482 - INFO - Found file: target/test/test_pl_pig_chess_interface_functional.py
+2024-11-19 03:42:45,483 - INFO - Found 3 unit tests and 3 functional tests
+2024-11-19 03:42:45,483 - INFO - Matched pair: target/test/test_pl_pig_chess_engine.py - target/test/test_pl_pig_chess_engine_functional.py
+2024-11-19 03:42:45,484 - INFO - Matched pair: target/test/test_pl_pig_chess_engine_eval.py - target/test/test_pl_pig_chess_engine_eval_functional.py
+2024-11-19 03:42:45,485 - INFO - Matched pair: target/test/test_pl_pig_chess_interface.py - target/test/test_pl_pig_chess_interface_functional.py
+2024-11-19 03:42:45,486 - INFO - Successfully matched 3 test pairs
+2024-11-19 03:42:45,488 - INFO - Found 3 test pairs to process
+2024-11-19 03:42:45,489 - INFO - Processing pair 1/3
+2024-11-19 03:42:45,490 - INFO - Processing test pair: target/test/test_pl_pig_chess_engine.py and target/test/test_pl_pig_chess_engine_functional.py
+2024-11-19 03:42:45,808 - INFO - Extracted test case: test_get_color
+2024-11-19 03:42:45,809 - INFO - Extracted test case: test_get_type
+2024-11-19 03:42:45,810 - INFO - Extracted test case: test_init
+2024-11-19 03:42:45,810 - INFO - Extracted test case: test_set_get_piece
+2024-11-19 03:42:45,811 - INFO - Extracted test case: test_is_square_attacked
+2024-11-19 03:42:45,812 - INFO - Extracted test case: test_init
+2024-11-19 03:42:45,812 - INFO - Extracted test case: test_init
+2024-11-19 03:42:45,813 - INFO - Extracted test case: test_initialize
+2024-11-19 03:42:45,814 - INFO - Extracted test case: test_get_best_move
+2024-11-19 03:42:45,814 - INFO - Extracted test case: test_make_unmake_move
+2024-11-19 03:42:45,815 - INFO - Extracted test case: test_game_end_conditions
+2024-11-19 03:42:45,816 - INFO - Extracted test case: test_get_set_fen
+2024-11-19 03:42:45,816 - INFO - Extracted test case: test_init
+2024-11-19 03:42:45,817 - INFO - Extracted test case: test_start_new_game
+2024-11-19 03:42:45,818 - INFO - Extracted test case: test_make_move
+2024-11-19 03:42:45,818 - INFO - Extracted test case: test_get_best_move
+2024-11-19 03:42:45,819 - INFO - Extracted test case: test_is_game_over
+2024-11-19 03:42:45,821 - INFO - Extracted test case: test_get_game_result
+2024-11-19 03:42:45,821 - INFO - Extracted test case: test_main
+2024-11-19 03:42:45,822 - INFO - Extracted test case: test_full_game
+2024-11-19 03:42:45,823 - INFO - Extracted test case: test_engine_board_integration
+2024-11-19 03:42:45,823 - INFO - Extracted test case: test_invalid_move
+2024-11-19 03:42:45,824 - INFO - Extracted test case: test_valid_move
+2024-11-19 03:42:45,824 - INFO - Extracted test case: test_board_setup
+2024-11-19 03:42:45,825 - INFO - Extracted test case: test_make_move_out_of_bounds
+2024-11-19 03:42:45,826 - INFO - Extracted test case: test_opening_book_integration
+2024-11-19 03:42:45,827 - INFO - Extracted test case: test_engine_performance
+2024-11-19 03:42:45,827 - INFO - Extracted test case: test_checkmate_detection
+2024-11-19 03:42:45,828 - INFO - Extracted test case: test_stalemate_detection
+2024-11-19 03:42:45,828 - INFO - Extracted test case: test_insufficient_material_detection
+2024-11-19 03:42:45,829 - INFO - Extracted test case: test_repetition_draw_detection
+2024-11-19 03:42:45,994 - INFO - Successfully wrote to S3: target/gherkin/pl_pig_chess_engine.feature
+2024-11-19 03:42:45,998 - INFO - Generated Gherkin feature file: target/gherkin/pl_pig_chess_engine.feature
+2024-11-19 03:42:46,006 - INFO - Completed processing pair 1/3
+2024-11-19 03:42:46,007 - INFO - Processing pair 2/3
+2024-11-19 03:42:46,008 - INFO - Processing test pair: target/test/test_pl_pig_chess_engine_eval.py and target/test/test_pl_pig_chess_engine_eval_functional.py
+2024-11-19 03:42:46,281 - INFO - Extracted test case: test_initialization
+2024-11-19 03:42:46,282 - INFO - Extracted test case: test_pdN_calculation
+2024-11-19 03:42:46,284 - INFO - Extracted test case: test_pdX_calculation
+2024-11-19 03:42:46,285 - INFO - Extracted test case: test_initialize
+2024-11-19 03:42:46,285 - INFO - Extracted test case: test_pre_process_called
+2024-11-19 03:42:46,286 - INFO - Extracted test case: test_pre_processor_called
+2024-11-19 03:42:46,287 - INFO - Extracted test case: test_eval_returns_integer
+2024-11-19 03:42:46,287 - INFO - Extracted test case: test_initialization
+2024-11-19 03:42:46,289 - INFO - Extracted test case: test_make_move_called
+2024-11-19 03:42:46,290 - INFO - Extracted test case: test_evaluate_position
+2024-11-19 03:42:46,290 - INFO - Extracted test case: test_evaluate_position_calls_eval
+2024-11-19 03:42:46,291 - INFO - Extracted test case: test_move_legality
+2024-11-19 03:42:46,291 - INFO - Extracted test case: test_game_over_detection
+2024-11-19 03:42:46,292 - INFO - Extracted test case: test_game_play
+2024-11-19 03:42:46,293 - INFO - Extracted test case: test_evaluation_integration
+2024-11-19 03:42:46,294 - INFO - Extracted test case: test_make_move_input_validation
+2024-11-19 03:42:46,295 - INFO - Extracted test case: test_evaluate_position_output_range
+2024-11-19 03:42:46,296 - INFO - Extracted test case: test_board_reset
+2024-11-19 03:42:46,297 - INFO - Extracted test case: test_illegal_move_handling
+2024-11-19 03:42:46,302 - INFO - Extracted test case: test_player_input_integration
+2024-11-19 03:42:46,304 - INFO - Extracted test case: test_evaluation_performance
+2024-11-19 03:42:46,305 - INFO - Extracted test case: test_chess_engine_eval_initialization
+2024-11-19 03:42:46,305 - INFO - Extracted test case: test_pdN_function
+2024-11-19 03:42:46,306 - INFO - Extracted test case: test_pdX_function
+2024-11-19 03:42:46,479 - INFO - Successfully wrote to S3: target/gherkin/pl_pig_chess_engine_eval.feature
+2024-11-19 03:42:46,482 - INFO - Generated Gherkin feature file: target/gherkin/pl_pig_chess_engine_eval.feature
+2024-11-19 03:42:46,483 - INFO - Completed processing pair 2/3
+2024-11-19 03:42:46,484 - INFO - Processing pair 3/3
+2024-11-19 03:42:46,485 - INFO - Processing test pair: target/test/test_pl_pig_chess_interface.py and target/test/test_pl_pig_chess_interface_functional.py
+2024-11-19 03:42:46,791 - INFO - Extracted test case: test_new_game_initialization
+2024-11-19 03:42:46,792 - INFO - Extracted test case: test_new_game_custom_parameters
+2024-11-19 03:42:46,793 - INFO - Extracted test case: test_do_move_legal
+2024-11-19 03:42:46,793 - INFO - Extracted test case: test_do_move_illegal
+2024-11-19 03:42:46,794 - INFO - Extracted test case: test_do_bot_move
+2024-11-19 03:42:46,795 - INFO - Extracted test case: test_get_bot_level
+2024-11-19 03:42:46,800 - INFO - Extracted test case: test_find_best_move
+2024-11-19 03:42:46,803 - INFO - Extracted test case: test_minimax_checkmate
+2024-11-19 03:42:46,806 - INFO - Extracted test case: test_evaluate_position
+2024-11-19 03:42:46,807 - INFO - Extracted test case: test_takeback_move
+2024-11-19 03:42:46,807 - INFO - Extracted test case: test_takeback_moves
+2024-11-19 03:42:46,808 - INFO - Extracted test case: test_set_white_level
+2024-11-19 03:42:46,813 - INFO - Extracted test case: test_set_black_level
+2024-11-19 03:42:46,813 - INFO - Extracted test case: test_position
+2024-11-19 03:42:46,814 - INFO - Extracted test case: test_run_test_suite
+2024-11-19 03:42:46,814 - INFO - Extracted test case: test_new_game_and_bot_play
+2024-11-19 03:42:46,815 - INFO - Extracted test case: test_human_vs_bot_game
+2024-11-19 03:42:46,815 - INFO - Extracted test case: test_invalid_move
+2024-11-19 03:42:46,819 - INFO - Extracted test case: test_valid_move
+2024-11-19 03:42:46,819 - INFO - Extracted test case: test_new_game_reset
+2024-11-19 03:42:46,820 - INFO - Extracted test case: test_move_on_finished_game
+2024-11-19 03:42:46,829 - INFO - Extracted test case: test_custom_starting_position
+2024-11-19 03:42:46,830 - INFO - Extracted test case: test_evaluation_speed
+2024-11-19 03:42:46,830 - INFO - Extracted test case: test_takeback_move
+2024-11-19 03:42:46,831 - INFO - Extracted test case: test_set_player_levels
+2024-11-19 03:42:46,832 - INFO - Extracted test case: test_find_best_move
+2024-11-19 03:42:46,833 - INFO - Extracted test case: test_evaluation_function
+2024-11-19 03:42:47,043 - INFO - Successfully wrote to S3: target/gherkin/pl_pig_chess_interface.feature
+2024-11-19 03:42:47,052 - INFO - Generated Gherkin feature file: target/gherkin/pl_pig_chess_interface.feature
+2024-11-19 03:42:47,056 - INFO - Completed processing pair 3/3
+2024-11-19 03:42:47,058 - INFO - Gherkin conversion process completed

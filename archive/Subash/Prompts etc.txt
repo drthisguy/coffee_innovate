@@ -1,0 +1,2 @@
+.pks - use to create different set of microservices
+using this below pl/sql pks code, identify the functions that can be converted into microservices and list them out in table format
